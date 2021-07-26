@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .popover-layout {
+    @apply max-w-lg !important;
+  }
+}

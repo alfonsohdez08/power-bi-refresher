@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31512.422
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SuperPowerBIRefresher.API", "src\SuperPowerBIRefresher.API\SuperPowerBIRefresher.API.csproj", "{EE6736D6-58AC-48CE-9557-F918F4BD4AEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SuperPowerBIRefresher.Tests", "tests\SuperPowerBIRefresher.Tests\SuperPowerBIRefresher.Tests.csproj", "{182CF8B8-99F7-48CB-9725-654CA6250E67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE6736D6-58AC-48CE-9557-F918F4BD4AEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE6736D6-58AC-48CE-9557-F918F4BD4AEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE6736D6-58AC-48CE-9557-F918F4BD4AEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE6736D6-58AC-48CE-9557-F918F4BD4AEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{182CF8B8-99F7-48CB-9725-654CA6250E67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{182CF8B8-99F7-48CB-9725-654CA6250E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{182CF8B8-99F7-48CB-9725-654CA6250E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{182CF8B8-99F7-48CB-9725-654CA6250E67}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AB9A04B-8495-4574-8F09-60248059611F}
+	EndGlobalSection
+EndGlobal
