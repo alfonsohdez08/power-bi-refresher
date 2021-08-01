@@ -1,17 +1,17 @@
-﻿using SuperPowerBIRefresher.API.Models;
+﻿using SuperPowerBIRefresher.WebAPI.Data.PowerBI;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SuperPowerBIRefresher.API.Security
+namespace SuperPowerBIRefresher.WebAPI.Auth
 {
-    class AccessTokenHandler : DelegatingHandler
+    class AccessTokenHttpHandler : DelegatingHandler
     {
-        private readonly Client _client;
+        private readonly Account _powerBIAccount;
 
-        public AccessTokenHandler(Client client)
+        public AccessTokenHttpHandler(Account powerBIAccount)
         {
-            _client = client;
+            _powerBIAccount = powerBIAccount;
         }
 
         protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
@@ -21,7 +21,7 @@ namespace SuperPowerBIRefresher.API.Security
             if (request.Headers.Contains(AuthorizationHeader))
                 request.Headers.Remove(AuthorizationHeader);
 
-            string accessToken = AccessTokenAcquirer.AcquireAccessToken(_client);
+            string accessToken = AccessTokenAcquirer.AcquireAccessToken(_powerBIAccount);
             request.Headers.Add(AuthorizationHeader, $"Bearer {accessToken}");
 
             return base.SendAsync(request, cancellationToken);

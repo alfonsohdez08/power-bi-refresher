@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
-namespace SuperPowerBIRefresher.API.Models
+namespace SuperPowerBIRefresher.WebAPI.Data.PowerBI
 {
-    public class DatasetRefresh
+    class DatasetRefresh
     {
         public string DatasetId { get; set; }
-        public string Status { get; set; }
+
+        [JsonConverter(typeof(JsonStringEnumConverter))]
+        public RefreshStatus Status { get; set; }
+        
         public DateTime? StartDateInUtc { get; set; }
         public DateTime? EndDateInUtc { get; set; }
         public DatasetRefreshErrorDetails Error { get; set; }
     }
 
-    public class DatasetRefreshErrorDetails
+    enum RefreshStatus
+    {
+        Completed, Failed, Disabled, Unknown
+    }
+
+    class DatasetRefreshErrorDetails
     {
         public string ErrorCode { get; set; }
         public string Description { get; set; }
@@ -30,7 +39,7 @@ namespace SuperPowerBIRefresher.API.Models
             using (var jsonDocument = JsonDocument.Parse(errorJson))
             {
                 JsonElement jsonRootElement = jsonDocument.RootElement;
-                
+
                 /*
                     It seems there is a bug either with the Power BI REST API wrapper by Microsoft or the API itself because
                     the "errorCode" field would hold either a simple string or a JSON object as string which is not well formed.

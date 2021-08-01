@@ -1,4 +1,4 @@
-﻿using SuperPowerBIRefresher.API.Security;
+﻿using SuperPowerBIRefresher.WebAPI.Auth;
 using System;
 using System.Collections.Generic;
 using Xunit;

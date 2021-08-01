@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\SuperPowerBIRefresher.API\SuperPowerBIRefresher.API.csproj" />
+    <ProjectReference Include="..\..\src\SuperPowerBIRefresher.WebAPI\SuperPowerBIRefresher.WebAPI.csproj" />
   </ItemGroup>
 
 </Project>

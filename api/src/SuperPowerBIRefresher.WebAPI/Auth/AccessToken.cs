@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SuperPowerBIRefresher.API.Security
+namespace SuperPowerBIRefresher.WebAPI.Auth
 {
     public class AccessToken
     {
