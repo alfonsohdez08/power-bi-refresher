@@ -1,4 +1,4 @@
-> # It is a work in progress! Please, come back in a few days to see updates.
+> # It is a work in progress!
 
 # Super Power BI Refresher
 
